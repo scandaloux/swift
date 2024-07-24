@@ -33,6 +33,7 @@ end)
   route:get("/", function(req, rep)
     rep:send("This is my other route! You should totally check out /route/path")
   end)
+
   route:get("/path", function(req, rep)
     rep:send("This is my other path!")
   end)
