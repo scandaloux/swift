@@ -1,6 +1,6 @@
 local net = require("@lune/net")
 local fs = require("@lune/fs")
-local mimeTypes = require("data/minetypes")
+local mimeTypes = require("data/mimetypes")
 
 local Reply = {}
 Reply.__index = Reply
