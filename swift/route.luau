@@ -34,7 +34,7 @@ function Route:register(prefix, route)
   end
 end
 
-function Route:_method(method, prefix, callback)
+function Route:path(method, prefix, callback)
   assert(prefix, "No prefix defined")
   assert(callback, "No callback defined")
   assert(self._structure[prefix] == nil, "Prefix already used")
@@ -47,39 +47,39 @@ function Route:_method(method, prefix, callback)
 end
 
 function Route:get(...)
-  self:_method("GET", ...)
+  self:path("GET", ...)
 end
 
 function Route:head(...)
-  self:_method("HEAD", ...)
+  self:path("HEAD", ...)
 end
 
 function Route:post(...)
-  self:_method("POST", ...)
+  self:path("POST", ...)
 end
 
 function Route:put(...)
-  self:_method("PUT", ...)
+  self:path("PUT", ...)
 end
 
 function Route:delete(...)
-  self:_method("DELETE", ...)
+  self:path("DELETE", ...)
 end
 
 function Route:connect(...)
-  self:_method("CONNECT", ...)
+  self:path("CONNECT", ...)
 end
 
 function Route:options(...)
-  self:_method("OPTIONS", ...)
+  self:path("OPTIONS", ...)
 end
 
 function Route:trace(...) 
-  self:_method("TRACE", ...)
+  self:path("TRACE", ...)
 end
 
 function Route:patch(...) 
-  self:_method("PATCH", ...)
+  self:path("PATCH", ...)
 end
 
 return Route
