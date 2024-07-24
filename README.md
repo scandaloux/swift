@@ -16,3 +16,7 @@ server:listen(8080, function()
   print("Server is running on port 8080")
 end)
 ```
+
+# Installation
+
+I haven't really gotten any proper installation for this yet, so just download the sourcecode and copy the src folder into a project, and rename it to swift.
