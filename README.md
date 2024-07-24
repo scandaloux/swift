@@ -3,6 +3,8 @@
 Swift is a minimal and extremely easy to use http framework for [https://github.com/lune-org/lune](Lune).
 It's based on NodeJS libraries such as Express and Fastify.
 
+**Swift is in a barebones stage, so it's pretty simple and lacking right now. I can't confirm if I will continue this project, but we'll see**
+
 ```luau
 local Swift = require("swift/index")
 
