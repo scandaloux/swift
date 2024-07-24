@@ -29,12 +29,14 @@ end)
   local Swift = require("swift/index")
 
   local route = Swift.route.new()
+
   route:get("/", function(req, rep)
     rep:send("This is my other route! You should totally check out /route/path")
   end)
   route:get("/path", function(req, rep)
     rep:send("This is my other path!")
   end)
+
   return route
   ```
 
@@ -44,10 +46,13 @@ end)
   local route = require("route")
 
   local server = Swift.server.new()
+
   server:register("/route", route)
+
   server:get("/", function(req, rep)
     rep:send("Hey, you shoud totally check out /route")
   end)
+
   server:listen(8080, function()
     print("Listening on port 8080")
   end)
